@@ -1,0 +1,432 @@
+/* 폰트와 변수 */
+
+@font-face {
+  font-family: "SunBatang-Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-900";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"),
+    url(./woff2/Pretendard-Black.woff2) format("woff2"),
+    url(./woff/Pretendard-Black.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-800";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"),
+    url(./woff2/Pretendard-ExtraBold.woff2) format("woff2"),
+    url(./woff/Pretendard-ExtraBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-700";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"),
+    url(./woff2/Pretendard-Bold.woff2) format("woff2"),
+    url(./woff/Pretendard-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-600";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"),
+    url(./woff2/Pretendard-SemiBold.woff2) format("woff2"),
+    url(./woff/Pretendard-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-500";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"),
+    url(./woff2/Pretendard-Medium.woff2) format("woff2"),
+    url(./woff/Pretendard-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-400";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"),
+    url(./woff2/Pretendard-Regular.woff2) format("woff2"),
+    url(./woff/Pretendard-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-300";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"),
+    url(./woff2/Pretendard-Light.woff2) format("woff2"),
+    url(./woff/Pretendard-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-200";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"),
+    url(./woff2/Pretendard-ExtraLight.woff2) format("woff2"),
+    url(./woff/Pretendard-ExtraLight.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard-100";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"),
+    url(./woff2/Pretendard-Thin.woff2) format("woff2"),
+    url(./woff/Pretendard-Thin.woff) format("woff");
+}
+
+:root {
+  --active-color: rgb(209, 118, 20);
+  --basic-color: #111;
+}
+
+/* 초기화 */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+textarea,
+input,
+select,
+textarea,
+button,
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+footer,
+nav,
+figure,
+main {
+  margin: 0;
+  padding: 0;
+  font-family: "SunBatang-Light";
+  color: var(--basic-color);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+footer,
+nav,
+figure,
+main {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-overflow-scrolling: auto;
+}
+
+img,
+form,
+fieldset,
+svg,
+li {
+  border: 0;
+  vertical-align: top;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  overflow: visible;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  margin: -1px;
+}
+
+input,
+button,
+select {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+address,
+caption,
+em {
+  font-style: normal;
+}
+
+a {
+  display: inline-block;
+  color: var(--basic-color); /* a태그는 글자색깔 양보 안함 */
+}
+
+a,
+a:focus,
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--active-color);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 공통 클래스 : 클래스명만 존재, 부모-자식 관계 없음, 부모 DOM 없음 */
+.d-flex {
+  display: flex;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcb {
+  justify-content: space-between;
+}
+
+.d-block {
+  display: block;
+}
+
+.container_fluid {
+  padding: 0 1rem;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.col-4 {
+  width: 33.333%;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  
+}
+
+/* 커스텀 스타일 */
+#hd {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--basic-color);
+}
+
+#hd .gnb {
+  gap: 2rem;
+}
+
+#hd .util {
+  gap: 1rem;
+}
+
+a.git {
+  color: black;
+}
+
+a.instar {
+  color: hotpink;
+}
+
+a.figma {
+  color: blue;
+}
+
+/* #hd .util a {
+  color: green;
+} 아래쪽에 쓰는 게 이김, 하지만 id로 시작해서 위로 가도 우선 순위가 됨 */
+
+#contact h2 {
+  color: red;
+}
+
+section > h2 {
+  text-align: center;
+}
+
+/* #slide {
+  background: url(https://i.pinimg.com/736x/b2/30/ec/b230ecca7266e952490312c58855c41b.jpg);
+} */
+
+.scalechild1 {
+  background-image: url(./img/minimal.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.scalechild2 {
+  background-image: url(./img/upcycling.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.scalechild3 {
+  background-image: url(./img/premium.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.main-text-style {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard-700";
+  font-size: 80px;
+}
+
+.sv-text-style {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard-400";
+}
+
+.text-color1 {
+  color: #713131;
+}
+
+.text-color2 {
+  color: white;
+}
+
+.scalebanner > div {
+  min-height: calc(100vh - 80px);
+  padding: 5vw 1vw;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.scalechild2 {
+    position: relative; /* 기준 설정 */
+}
+.scalechild2 h2 {
+    /* position: absolute;
+     left: 0;
+    bottom: 0; 
+    포지션이 있는 애들만 left/right 사용 가능 */
+    /* 반드시 기준 설정 
+    조상 태그들 중에서 포지션 지정하기
+    relative 먼저 안착화 시키고 absolute로 위치 지정 */
+    transform: rotate(-90deg);
+    flex-grow: 1;
+}
+
+    /* 딤처리 
+    dimmed - 부모
+    after - 자식 */
+.dimmed:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999; /* 다른 요소 위에 표시되도록 */
+}
+
+.dimmed {
+    overflow: hidden; /* 스크롤 방지 */
+    height: 100vh;
+    
+}
+
+#popup {
+    position: fixed; /* 화면에 고정 */
+    right: 0; /* 화면 오른쪽 */
+    bottom: 0; /* 화면 오른쪽 아래 */
+    min-width: 280px; /* 최소 너비 */
+    padding: 3rem 1rem; /* 여백 */
+    background-color: white;
+    border-radius: 2rem 2rem 0 0; /* 모서리 둥글게 */
+    overflow: hidden; /* 내용이 넘치면 숨김 처리 */
+    z-index: 10000; /* 다른 요소 위에 표시되도록 */
+    display: none; /* 기본적으로 숨김 */
+}
+
+.dimmed #popup {
+    display: block; /* dimmed 클래스가 적용되면 팝업 표시 */
+}

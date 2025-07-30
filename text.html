@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>세로쓰기 UI 예제</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #fafafa;
+      }
+
+      .vertical-text {
+        writing-mode: vertical-rl; /* 세로쓰기 (오른쪽 → 왼쪽) */
+        text-orientation: upright; /* 글자 방향 똑바로 세움 */
+        font-size: 2rem;
+        background-color: #222;
+        color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        margin: 20px;
+      }
+         .vertical-text2 {
+        writing-mode: vertical-rl; /* 세로쓰기 (오른쪽 → 왼쪽) */
+        text-orientation: upright; /* 글자 방향 똑바로 세움 */
+        font-size: 2rem;
+        background-color: #222;
+        color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vertical-text">세로 쓰기</div>
+    <div class="vertical-text2">세로 쓰기</div>
+
+  </body>
+</html>
